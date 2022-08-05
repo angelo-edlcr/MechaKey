@@ -1,0 +1,281 @@
+body {
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2021/07/teclado-mecanico-2397587.jpg?itok=2CiWktSy')  no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.top {
+    height: 100vh;
+    width: 100%;
+}
+.top .container {
+    width: inherit;
+    height: 100%;
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/03/teclado-mecanico-mac-drevo-calibur-v2-1880875.jpg?itok=gyX3Df86') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all ease-in-out 1s;
+}
+.top .container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(40, 62, 90, 0), rgba(38, 38, 38, 0.708) 50%, var(--dark) 90%);
+}
+
+.top div:last-child {
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    width: inherit;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top div:last-child h1 {
+    color: #fff;
+    font-size: 6em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.top div:last-child h1 span {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 800;
+}
+.top div:last-child span {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.top div:last-child span:nth-child(3) {
+    color: #fff;
+    font-size: 4em;
+    position: relative;
+    animation: updown .8s ease-in-out infinite;
+}
+@keyframes updown {
+    from {
+        top: 10px;
+    }
+    50% {
+        top: 30px;
+    }
+    to {
+        top: 10px;
+    }
+}
+
+/* KEYBOARDS CONTAINER */
+.keyboard-section {
+    height: auto;
+    color: #fff;
+    background: var(--dark);
+}
+
+.keyboard-section .keyboards-container {
+    width: 100%;
+    height: calc(100vh - 150px);
+    max-height: 500px;
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+.keyboards-container h2 {
+    position: relative;
+    width: calc(100% - 65px);
+    font-size: 1.5em;
+    left: 30px;
+}
+.keyboards-container:nth-child(even) h2 {
+    position: relative;
+    text-align: right;
+    right: 200px;
+}
+.keyboards-container .view-keyboards {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    position: relative;
+}
+.view-keyboards .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2021/07/teclado-mecanico-2397587.jpg?itok=2CiWktSy') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: .8;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+.view-keyboards .image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 124, 218, 0.856);
+}
+
+.view-keyboards .image img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* background: rgba(0, 124, 218, 0.856); */
+    transition: all ease-in-out .3s;
+}
+.keyboards-container:nth-child(even) .view-keyboards .image {
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.view-keyboards:hover .image img {
+    width: 100%;
+    transition: all ease-in-out .3s;
+}
+
+.view-keyboards .description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px 30px 10px 10px;
+    row-gap: 30px;
+    line-height: 2rem;
+    font-size: 1.1em;
+}
+.view-keyboards .description p {
+    position: relative;
+    top: -60px;
+}
+
+.keyboards-container:nth-child(even) .view-keyboards .description {
+    align-items: flex-end;
+    text-align: right;
+}
+.view-keyboards .description a {
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    padding: 15px;
+    padding-right: 35px;
+    position: absolute;
+    bottom: 0;
+    /* overflow: hidden; */
+}
+.view-keyboards .description a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    right: 15px;
+    transform: rotate(-45deg)
+}
+
+
+/* SECTION FOUND US */
+section.found-us {
+    background:  rgba(0, 124, 218, 0.856);
+    height: calc(50vh + 40px);
+    display: flex;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+section.found-us .container {
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 30px;
+}
+
+section.found-us .container .map {
+    background: var(--dark);
+    width: 50%;
+    height: 100%;
+}
+section.found-us .container .map div {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px solid var(--dark);
+}
+section.found-us .container .map div iframe {
+    width: 100%;
+    height: 100%;
+}
+section.found-us .container .location-desc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+section.found-us .container .location-desc p {
+    font-size: .85em;
+    font-weight: 500;
+}
+section.found-us .container .location-desc h2 {
+    font-size: 1.5em;
+}
+
+/* SECTION CONTACT */
+section.contact {
+    background: var(--dark);
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+section.contact .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.contact .container h2 {
+    position: absolute;
+    top: 50px;
+    font-size: 1.6em;
+}
+section.contact .container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+section.contact .container div h3 {
+    font-size: 1.5em;
+    color: var(--primary);
+}
+section.contact .container div div a {
+    font-size: 2.2em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}

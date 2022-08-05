@@ -1,0 +1,113 @@
+:root {
+    --primary: rgb(0, 124, 218);
+    --dark: rgb(38, 38, 38);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    letter-spacing: .5px;
+}
+
+.section {
+    width: 100%;
+    padding: 30px;
+}
+
+.page-load {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000000000000;
+    background: var(--dark);
+}
+.page-load div {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: var(--dark);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    font-size: 1.2em;
+    font-weight: 500;
+    animation: loading 1s linear infinite;
+}
+.page-load div span {
+    animation: loadingReverse 1s linear infinite;
+}
+
+@keyframes loading {
+    from {}
+    to {transform: rotate(360deg);}
+}
+@keyframes loadingReverse {
+    from {}
+    to {transform: rotate(-360deg);}
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 45px;
+    position: relative;
+    background: var(--dark);
+    color: #fff;
+    border-top: 1px solid var(--primary);
+}
+footer span {
+    font-weight: 700;
+    font-size: .9em;
+    text-transform: uppercase;
+    position: relative;
+}
+footer span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: -30px;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+}
+footer .footer-networks {
+    display: flex;
+    column-gap: 20px;
+}
+
+.footer-networks div {
+    width: 18px;
+    height: 18px;
+}
+.footer-networks div a {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.footer-networks div a ion-icon {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer + div {
+    opacity: 0 !important;
+}

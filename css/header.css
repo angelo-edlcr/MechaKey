@@ -1,0 +1,84 @@
+
+header {
+    height: 50px;
+    width: 100%;
+}
+
+nav {
+    height: inherit;
+    width: 100%;
+    background: linear-gradient(to right, var(--primary) 30%, rgb(38, 38, 38) 30%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000000000;
+}
+
+nav div:first-child {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav div:first-child a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+nav div:last-child {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .8em;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav div:last-child a,
+nav div:last-child li {
+    padding: 17.5px 15px;
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+nav div:last-child a:hover,
+nav div:last-child li:hover {
+    background: var(--primary);
+}
+
+nav div:last-child li div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+    box-shadow: 0 1px 1px var(--dark);
+    width: 100%;
+    left: 0;
+    top: 50px;
+
+}
+nav div:last-child li div a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    height: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+nav div:last-child li:hover div a {
+    height: 40px;
+    padding: 10px;
+}
+nav div:last-child li div a:hover {
+    background: var(--dark);
+}
